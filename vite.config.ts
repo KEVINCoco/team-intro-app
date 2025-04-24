@@ -6,6 +6,7 @@ import postcsspxtoviewport from 'postcss-px-to-viewport'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: '/team-intro-app/',
   css: {
     postcss: {
       // 自动读取 postcss.config.js
