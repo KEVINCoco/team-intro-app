@@ -1,12 +1,29 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
 // @ts-ignore 忽略模块声明文件缺失的错误
 import postcsspxtoviewport from 'postcss-px-to-viewport'
+import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [VantResolver()],
+    }),
+    Components({
+      resolvers: [VantResolver()], // 自动解析 Vant 组件
+    }),
+  ],
   base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // 将 @ 映射为 src 目录
+    }
+  },
   css: {
     postcss: {
       // 自动读取 postcss.config.js
@@ -29,6 +46,6 @@ export default defineConfig({
           landscapeWidth: 568   // 横屏宽度
         })
       ]
-    }
+    },
   }
 })
