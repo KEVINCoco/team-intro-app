@@ -23,6 +23,7 @@
     "less-loader": "^12.2.0",
     "postcss-px-to-viewport": "^1.1.1",
     "rollup-plugin-visualizer": "^5.14.0",
+    "terser": "^5.39.0",
     "typescript": "~5.7.2",
     "unplugin-auto-import": "^19.1.2",
     "unplugin-vue-components": "^28.5.0",

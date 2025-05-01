@@ -8,16 +8,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    VanButton: typeof import('vant/es')['Button']
     VanCol: typeof import('vant/es')['Col']
-    VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanImage: typeof import('vant/es')['Image']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanRow: typeof import('vant/es')['Row']
-    VantButton: typeof import('vant/es')['tButton']
-    VantConfigProvider: typeof import('vant/es')['tConfigProvider']
   }
 }
