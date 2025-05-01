@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
 const teamMembers = [
     { name: '余志辉', image: '/src/assets/images/余志辉.png' },
