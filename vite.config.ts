@@ -4,7 +4,7 @@ import path from 'path'
 // @ts-ignore 忽略模块声明文件缺失的错误
 import postcsspxtoviewport from 'postcss-px-to-viewport'
 import viteImagemin from 'vite-plugin-imagemin'
-import { visualizer } from 'rollup-plugin-visualizer'
+// import { visualizer } from 'rollup-plugin-visualizer'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
@@ -25,10 +25,10 @@ export default defineConfig({
         interlaced: false
       },
       optipng: {
-        optimizationLevel: 7
+        optimizationLevel: 4
       },
       mozjpeg: {
-        quality: 20
+        quality: 60
       },
       pngquant: {
         quality: [0.8, 0.9],
@@ -46,42 +46,18 @@ export default defineConfig({
         ]
       }
     }),
-    visualizer({
-      open: true,
-      gzipSize: true,
-      brotliSize: true
-    })
+    // visualizer({
+    //   open: true,
+    //   gzipSize: true,
+    //   brotliSize: true
+    // })
   ],
   build: {
-    // 配置静态资源分割
-    rollupOptions: {
-      external: ['vue', 'vue-router', 'axios'],
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-        },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-        globals: {
-          vue: 'Vue',
-          'vue-router': 'VueRouter',
-          axios: 'axios'
-        }
-      }
-    },
     // 启用 brotli 和 gzip 压缩
     // brotliSize 选项已在 Vite 4.0 中移除，改用 reportCompressedSize
     reportCompressedSize: true,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
+    minify: 'esbuild',
+    sourcemap: false,
   },
   base: '/',
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
