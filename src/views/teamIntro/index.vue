@@ -1,13 +1,20 @@
 <script setup lang="ts">
+import YZHImg from '@/assets/images/余志辉.png'
+import LYImg from '@/assets/images/吕莉.png'
+import ZSWImg from '@/assets/images/庄文雅.png'
+import WWLImg from '@/assets/images/王武龙.png'
+import RLYImg from '@/assets/images/罗兰英.png'
+import HHWImg from '@/assets/images/胡浩波.png'
+import CJHImg from '@/assets/images/陈锦辉.png'
 
 const teamMembers = [
-    { name: '余志辉', image: '/src/assets/images/余志辉.png' },
-    { name: '吕莉', image: '/src/assets/images/吕莉.png' },
-    { name: '庄文雅', image: '/src/assets/images/庄文雅.png' },
-    { name: '王武龙', image: '/src/assets/images/王武龙.png' },
-    { name: '罗兰英', image: '/src/assets/images/罗兰英.png' },
-    { name: '胡浩波', image: '/src/assets/images/胡浩波.png' },
-    { name: '陈锦辉', image: '/src/assets/images/陈锦辉.png' },
+    { name: '余志辉', image: YZHImg, title: '前端开发工程师', description: '专注于Web前端开发，擅长Vue.js和TypeScript技术栈。' },
+    { name: '吕莉', image: LYImg, title: '产品经理', description: '负责产品规划和用户体验设计，拥有丰富的产品管理经验。' },
+    { name: '庄文雅', image: ZSWImg, title: 'UI设计师', description: '专注于用户界面设计，擅长创造美观且实用的界面。' },
+    { name: '王武龙', image: WWLImg, title: '后端开发工程师', description: '专注于服务端开发，擅长Java和Spring技术栈。' },
+    { name: '罗兰英', image: RLYImg, title: '测试工程师', description: '负责产品质量保证，擅长自动化测试和性能测试。' },
+    { name: '胡浩波', image: HHWImg, title: '运维工程师', description: '负责系统运维和部署，擅长Docker和Kubernetes。' },
+    { name: '陈锦辉', image: CJHImg, title: '项目经理', description: '负责项目管理和团队协调，拥有丰富的项目管理经验。' },
 ]
 </script>
 
