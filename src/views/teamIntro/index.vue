@@ -49,6 +49,6 @@ const teamMembers = [
 
 .member-name {
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, 0.85);
 }
 </style>
