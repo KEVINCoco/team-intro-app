@@ -8,6 +8,7 @@ import viteImagemin from 'vite-plugin-imagemin'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -46,6 +47,13 @@ export default defineConfig({
         ]
       }
     }),
+    createHtmlPlugin({
+      inject: {
+        data: {
+          title: '团队介绍'
+        }
+      }
+    })
     // visualizer({
     //   open: true,
     //   gzipSize: true,

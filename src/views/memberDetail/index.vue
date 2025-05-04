@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import YZHImg from '@/assets/images/余志辉.png'
 import LYImg from '@/assets/images/吕莉.png'
@@ -8,6 +8,8 @@ import WWLImg from '@/assets/images/王武龙.png'
 import RLYImg from '@/assets/images/罗兰英.png'
 import HHWImg from '@/assets/images/胡浩波.png'
 import CJHImg from '@/assets/images/陈锦辉.png'
+
+const loading = ref(true)
 
 const route = useRoute()
 const memberName = route.params.name as string
@@ -18,14 +20,45 @@ const teamMembers = [
     image: YZHImg,
     title: '余志辉',
     position: '医师',
-    description: '医学硕士 毕业于广州医科大学。硕士期间与中山大学肿瘤防治中心联合培养，从事恶性肿瘤的发生发展及耐药等基础科学研究工作，揭示了改善脑胶质瘤化疗耐药的潜在靶点，并阐明蛋白翻译后修饰作用对宫颈癌发生发展及预后的影响，相关科研成果发表在国际学术期刊上，供同行评议。同时以参与人身份发表多篇SCI论文。毕业后于广东省人民医院放疗科进行住院医师规范化培训，熟悉常规实体肿瘤的临床诊疗，特别是乳腺癌、肺癌及结直肠癌的放化疗、靶向治疗及免疫治疗。'
+    description: '医学硕士 毕业于广州医科大学。硕士期间与中山大学肿瘤防治中心联合培养，从事恶性肿瘤的发生发展及耐药等基础科学研究工作，揭示了改善脑胶质瘤化疗耐药的潜在靶点，并阐明蛋白翻译后修饰作用对宫颈癌发生发展及预后的影响，相关科研成果发表在国际学术期刊上，供同行评议。同时以参与人身份发表多篇SCI论文。毕业后于广东省人民医院放疗科进行住院医师规范化培训，熟悉常规实体肿瘤的临床诊疗，特别是乳腺癌、肺癌及结直肠癌的放化疗、靶向治疗及免疫治疗。',
   },
   {
     name: '吕莉',
     image: LYImg,
     title: '吕莉',
     position: '主任医师',
-    description: '本科、硕士毕业于武汉大学，2007年至今从事肿瘤科医疗、教学工作，临床经验丰富，擅长各种实体肿瘤（包括肺癌，乳腺癌，结直肠癌，食管癌，妇科肿瘤，头颈部肿瘤等）的放化疗、内分泌治疗、免疫治疗、分子靶向治疗，并曾于2013年至中山大学肿瘤防治中心放疗科进修学习，进一步丰富肿瘤放射治疗经验。主持及参与科研课题3项，获得惠州市科技局科技进步三等奖1项，以第一作者身份发表省级、国家级医学论文7篇。'
+    description: '本科、硕士毕业于武汉大学，2007年至今从事肿瘤科医疗、教学工作，临床经验丰富，擅长各种实体肿瘤（包括肺癌，乳腺癌，结直肠癌，食管癌，妇科肿瘤，头颈部肿瘤等）的放化疗、内分泌治疗、免疫治疗、分子靶向治疗，并曾于2013年至中山大学肿瘤防治中心放疗科进修学习，进一步丰富肿瘤放射治疗经验。主持及参与科研课题3项，获得惠州市科技局科技进步三等奖1项，以第一作者身份发表省级、国家级医学论文7篇。',
+    // 学术兼职
+    academicList: [
+      {
+        department: '惠州市抗癌协会传统医学专业委员会',
+        duty: '常务委员',
+      },
+      {
+        department: '惠州市医学会肿瘤放射治疗学分会',
+        duty: '常务委员',
+      },
+      {
+        department: '广东省肝脏病学会放射肿瘤专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省医学教育协会肿瘤学专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省预防医学会肿瘤防治专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省抗癌协会神经肿瘤专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '惠州市抗癌协会头颈肿瘤专业委员会',
+        duty: '秘书',
+      },
+    ],
   },
   {
     name: '庄文雅',
@@ -39,7 +72,50 @@ const teamMembers = [
     image: WWLImg,
     title: '王武龙',
     position: '医学博士 主任医师',
-    description: '科主任：王武龙，中共党员，肿瘤学博士，主任医师，硕士研究生导师。王武龙医师毕业于天津医科大学，师从我国著名放射肿瘤专家、原天津医科大学肿瘤医院院长王平教授。王武龙主任长期从事肿瘤放射治疗临床工作，熟悉并掌握实体瘤的临床治疗，特别是肺癌、食管癌、结直肠癌的同步放化疗，具备扎实的理论基础和丰富的临床工作经验。并曾于中国医学科学院肿瘤医院和中山大学附属肿瘤医院放疗中心进修学习，掌握先进的肿瘤放射治疗技术，可为肿瘤患者提供精准治疗。王武龙主任致力于抗肿瘤血管生成的基础科学研究工作，主持各级各类科研项目8项，参与各级各类科研项目6项；发表论文20余篇，SCI收录7篇；参与编写医学著作7部。'
+    description: '科主任：王武龙，中共党员，肿瘤学博士，主任医师，硕士研究生导师。王武龙医师毕业于天津医科大学，师从我国著名放射肿瘤专家、原天津医科大学肿瘤医院院长王平教授。王武龙主任长期从事肿瘤放射治疗临床工作，熟悉并掌握实体瘤的临床治疗，特别是肺癌、食管癌、结直肠癌的同步放化疗，具备扎实的理论基础和丰富的临床工作经验。并曾于中国医学科学院肿瘤医院和中山大学附属肿瘤医院放疗中心进修学习，掌握先进的肿瘤放射治疗技术，可为肿瘤患者提供精准治疗。王武龙主任致力于抗肿瘤血管生成的基础科学研究工作，主持各级各类科研项目8项，参与各级各类科研项目6项；发表论文20余篇，SCI收录7篇；参与编写医学著作7部。',
+    // 学术兼职
+    academicList: [
+      {
+        department: '北京癌症防治学会消化道肿瘤精准治疗专委会',
+        duty: '副主任委员',
+      },
+      {
+        department: '中国抗癌协会肿瘤热疗专委会微波热疗专委会',
+        duty: '委员',
+      },
+      {
+        department: '海峡两岸医药卫生交流协会肿瘤防治专委会粒子学组',
+        duty: '委员',
+      },
+      {
+        department: '广东省惠州市抗癌协会肿瘤放疗专委会',
+        duty: '副主任委员',
+      },
+      {
+        department: '内蒙古抗癌协会肺癌专业委员会',
+        duty: '副主任委员',
+      },
+      {
+        department: '包头市医学会肿瘤医学专科分会',
+        duty: '副主任委员',
+      },
+      {
+        department: '内蒙古抗癌协会神经肿瘤青委会',
+        duty: '副主任委员',
+      },
+      {
+        department: '内蒙古医学会放射肿瘤学分会',
+        duty: '常务委员',
+      },
+      {
+        department: '内蒙古抗癌协会肿瘤放疗专委会',
+        duty: '常务委员',
+      },
+      {
+        department: '内蒙古医师协会放射治疗医师分会',
+        duty: '常务委员',
+      },
+    ]
   },
   {
     name: '罗兰英',
@@ -65,35 +141,82 @@ const teamMembers = [
 ]
 
 const memberInfo = ref(teamMembers.find(member => member.name === memberName))
+
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false
+  }, 500)
+})
 </script>
 
 <template>
   <div class="member-detail" v-if="memberInfo">
-    <van-nav-bar title="成员详情" left-arrow @click-left="$router.back()" />
-    <div class="content">
-      <van-image class="avatar" width="200" height="284" :src="memberInfo.image" />
-      <div class="info">
-        <div class="title">{{ memberInfo.title }}</div>
-        <div class="position">{{ memberInfo.position }}</div>
-        <div class="description">{{ memberInfo.description }}</div>
+    <van-nav-bar 
+      title="成员详情" 
+      left-arrow 
+      @click-left="$router.back()" 
+      :border="false"
+      :safe-area-inset-top="true"
+    />
+    <van-skeleton title avatar :row="10" :loading="loading">
+      <div class="content">
+        <van-image 
+          class="avatar" 
+          width="200" 
+          height="284" 
+          :src="memberInfo.image"
+          radius="8"
+          show-loading
+          show-error
+        >
+          <template #loading>
+            <van-loading type="spinner" size="20" />
+          </template>
+          <template #error>
+            <van-icon name="photo-fail" size="30" />
+          </template>
+        </van-image>
+        <div class="info van-slide-up-enter-active">
+          <div class="title van-ellipsis">{{ memberInfo.title }}</div>
+          <div class="position van-ellipsis">{{ memberInfo.position }}</div>
+          <div class="description">{{ memberInfo.description }}</div>
+          
+          <div v-if="memberInfo.academicList" class="academic-list">
+            <van-cell-group 
+              title="学术兼职"
+              inset
+            >
+              <van-cell 
+                v-for="(item, index) in memberInfo.academicList" 
+                :key="index" 
+                :title="item.department" 
+                :label="item.duty"
+                :border="index !== memberInfo.academicList.length - 1"
+              />
+            </van-cell-group>
+          </div>
+        </div>
       </div>
-    </div>
+    </van-skeleton>
   </div>
 </template>
 
 <style scoped>
 .member-detail {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background: #fff;
+  background: #f7f8fa;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content {
-  padding: 24px 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
+  animation: fade-in 0.3s ease-in-out;
 }
 
 .avatar {
@@ -104,6 +227,10 @@ const memberInfo = ref(teamMembers.find(member => member.name === memberName))
 .info {
   width: 100%;
   text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .name {
@@ -128,6 +255,50 @@ const memberInfo = ref(teamMembers.find(member => member.name === memberName))
 .description {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
-  line-height: 1.6;
+  line-height: 1.8;
+  margin: 16px 0;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.academic-list {
+  width: 100%;
+  margin-top: 20px;
+
+  :deep(.van-cell-group__title) {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.85);
+    background: transparent;
+  }
+
+  :deep(.van-cell) {
+    padding: 16px;
+    background: #f8f9fa;
+    
+    &__title {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+    }
+
+    &__label {
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.65);
+      margin-top: 6px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
