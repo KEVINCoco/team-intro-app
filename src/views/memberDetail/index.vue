@@ -16,58 +16,6 @@ const memberName = route.params.name as string
 
 const teamMembers = [
   {
-    name: '余志辉',
-    image: YZHImg,
-    title: '余志辉',
-    position: '医师',
-    description: '医学硕士 毕业于广州医科大学。硕士期间与中山大学肿瘤防治中心联合培养，从事恶性肿瘤的发生发展及耐药等基础科学研究工作，揭示了改善脑胶质瘤化疗耐药的潜在靶点，并阐明蛋白翻译后修饰作用对宫颈癌发生发展及预后的影响，相关科研成果发表在国际学术期刊上，供同行评议。同时以参与人身份发表多篇SCI论文。毕业后于广东省人民医院放疗科进行住院医师规范化培训，熟悉常规实体肿瘤的临床诊疗，特别是乳腺癌、肺癌及结直肠癌的放化疗、靶向治疗及免疫治疗。',
-  },
-  {
-    name: '吕莉',
-    image: LYImg,
-    title: '吕莉',
-    position: '主任医师',
-    description: '本科、硕士毕业于武汉大学，2007年至今从事肿瘤科医疗、教学工作，临床经验丰富，擅长各种实体肿瘤（包括肺癌，乳腺癌，结直肠癌，食管癌，妇科肿瘤，头颈部肿瘤等）的放化疗、内分泌治疗、免疫治疗、分子靶向治疗，并曾于2013年至中山大学肿瘤防治中心放疗科进修学习，进一步丰富肿瘤放射治疗经验。主持及参与科研课题3项，获得惠州市科技局科技进步三等奖1项，以第一作者身份发表省级、国家级医学论文7篇。',
-    // 学术兼职
-    academicList: [
-      {
-        department: '惠州市抗癌协会传统医学专业委员会',
-        duty: '常务委员',
-      },
-      {
-        department: '惠州市医学会肿瘤放射治疗学分会',
-        duty: '常务委员',
-      },
-      {
-        department: '广东省肝脏病学会放射肿瘤专业委员会',
-        duty: '委员',
-      },
-      {
-        department: '广东省医学教育协会肿瘤学专业委员会',
-        duty: '委员',
-      },
-      {
-        department: '广东省预防医学会肿瘤防治专业委员会',
-        duty: '委员',
-      },
-      {
-        department: '广东省抗癌协会神经肿瘤专业委员会',
-        duty: '委员',
-      },
-      {
-        department: '惠州市抗癌协会头颈肿瘤专业委员会',
-        duty: '秘书',
-      },
-    ],
-  },
-  {
-    name: '庄文雅',
-    image: ZSWImg,
-    title: '庄文雅',
-    position: '医师',
-    description: '硕士研究生，毕业于南方医科大学肿瘤学专业，在导师指导下完成肺癌相关课题研究，在佛山市第一人民医院肿瘤中心完成放射肿瘤学住院医师规范化培训，熟悉常见恶性肿瘤的诊疗规范，掌握常见恶性肿瘤的放射治疗、化疗等综合治疗，掌握常见恶性肿瘤的靶区勾画原则。'
-  },
-  {
     name: '王武龙',
     image: WWLImg,
     title: '王武龙',
@@ -118,11 +66,63 @@ const teamMembers = [
     ]
   },
   {
-    name: '罗兰英',
-    image: RLYImg,
-    title: '罗兰英',
-    position: '主治医师',
-    description: '硕士研究生 毕业广西医科大学  江西省整合医学学会肿瘤精准诊疗分会第一届委员会委员 江西省药物临床试验与研究学会第一届CRC管理专业委员会委员，原单位临床试验GCP放疗专业秘书，2017年原单位技能操作大赛荣获“个人一等奖”，2021年度原单位指南解读大赛荣获“个人三等奖”，荣获原单位2020年度“榜样医生”荣誉称号；赣州市2021年健康科普讲解大赛三等奖，2022年南昌市经开区疫情防控“最美逆行者”， 从事肿瘤放射治疗工作至今，掌握全身多种肿瘤三维适形、IMRT、VMAT、三维后装等放射治疗、化疗、靶向、免疫治疗等综合治疗，对围放化疗管理具有独到经验，并从事肿瘤预防和早诊工作；公开发表论文多篇。'
+    name: '吕莉',
+    image: LYImg,
+    title: '吕莉',
+    position: '主任医师',
+    description: '本科、硕士毕业于武汉大学，2007年至今从事肿瘤科医疗、教学工作，临床经验丰富，擅长各种实体肿瘤（包括肺癌，乳腺癌，结直肠癌，食管癌，妇科肿瘤，头颈部肿瘤等）的放化疗、内分泌治疗、免疫治疗、分子靶向治疗，并曾于2013年至中山大学肿瘤防治中心放疗科进修学习，进一步丰富肿瘤放射治疗经验。主持及参与科研课题3项，获得惠州市科技局科技进步三等奖1项，以第一作者身份发表省级、国家级医学论文7篇。',
+    // 学术兼职
+    academicList: [
+      {
+        department: '惠州市抗癌协会传统医学专业委员会',
+        duty: '常务委员',
+      },
+      {
+        department: '惠州市医学会肿瘤放射治疗学分会',
+        duty: '常务委员',
+      },
+      {
+        department: '广东省肝脏病学会放射肿瘤专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省医学教育协会肿瘤学专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省预防医学会肿瘤防治专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '广东省抗癌协会神经肿瘤专业委员会',
+        duty: '委员',
+      },
+      {
+        department: '惠州市抗癌协会头颈肿瘤专业委员会',
+        duty: '秘书',
+      },
+    ],
+  },
+  // {
+  //   name: '罗兰英',
+  //   image: RLYImg,
+  //   title: '罗兰英',
+  //   position: '主治医师',
+  //   description: '硕士研究生 毕业广西医科大学  江西省整合医学学会肿瘤精准诊疗分会第一届委员会委员 江西省药物临床试验与研究学会第一届CRC管理专业委员会委员，原单位临床试验GCP放疗专业秘书，2017年原单位技能操作大赛荣获“个人一等奖”，2021年度原单位指南解读大赛荣获“个人三等奖”，荣获原单位2020年度“榜样医生”荣誉称号；赣州市2021年健康科普讲解大赛三等奖，2022年南昌市经开区疫情防控“最美逆行者”， 从事肿瘤放射治疗工作至今，掌握全身多种肿瘤三维适形、IMRT、VMAT、三维后装等放射治疗、化疗、靶向、免疫治疗等综合治疗，对围放化疗管理具有独到经验，并从事肿瘤预防和早诊工作；公开发表论文多篇。'
+  // },
+  {
+    name: '余志辉',
+    image: YZHImg,
+    title: '余志辉',
+    position: '医师',
+    description: '医学硕士 毕业于广州医科大学。硕士期间与中山大学肿瘤防治中心联合培养，从事恶性肿瘤的发生发展及耐药等基础科学研究工作，揭示了改善脑胶质瘤化疗耐药的潜在靶点，并阐明蛋白翻译后修饰作用对宫颈癌发生发展及预后的影响，相关科研成果发表在国际学术期刊上，供同行评议。同时以参与人身份发表多篇SCI论文。毕业后于广东省人民医院放疗科进行住院医师规范化培训，熟悉常规实体肿瘤的临床诊疗，特别是乳腺癌、肺癌及结直肠癌的放化疗、靶向治疗及免疫治疗。',
+  },
+  {
+    name: '庄文雅',
+    image: ZSWImg,
+    title: '庄文雅',
+    position: '医师',
+    description: '硕士研究生，毕业于南方医科大学肿瘤学专业，在导师指导下完成肺癌相关课题研究，在佛山市第一人民医院肿瘤中心完成放射肿瘤学住院医师规范化培训，熟悉常见恶性肿瘤的诊疗规范，掌握常见恶性肿瘤的放射治疗、化疗等综合治疗，掌握常见恶性肿瘤的靶区勾画原则。'
   },
   {
     name: '胡浩波',
@@ -151,24 +151,10 @@ onMounted(() => {
 
 <template>
   <div class="member-detail" v-if="memberInfo">
-    <van-nav-bar 
-      title="成员详情" 
-      left-arrow 
-      @click-left="$router.back()" 
-      :border="false"
-      :safe-area-inset-top="true"
-    />
+    <van-nav-bar title="成员详情" left-arrow @click-left="$router.back()" :border="false" :safe-area-inset-top="true" />
     <van-skeleton title avatar :row="10" :loading="loading">
       <div class="content">
-        <van-image 
-          class="avatar" 
-          width="200" 
-          height="284" 
-          :src="memberInfo.image"
-          radius="8"
-          show-loading
-          show-error
-        >
+        <van-image class="avatar" width="200" height="284" :src="memberInfo.image" radius="8" show-loading show-error>
           <template #loading>
             <van-loading type="spinner" size="20" />
           </template>
@@ -180,19 +166,11 @@ onMounted(() => {
           <div class="title van-ellipsis">{{ memberInfo.title }}</div>
           <div class="position van-ellipsis">{{ memberInfo.position }}</div>
           <div class="description">{{ memberInfo.description }}</div>
-          
+
           <div v-if="memberInfo.academicList" class="academic-list">
-            <van-cell-group 
-              title="学术兼职"
-              inset
-            >
-              <van-cell 
-                v-for="(item, index) in memberInfo.academicList" 
-                :key="index" 
-                :title="item.department" 
-                :label="item.duty"
-                :border="index !== memberInfo.academicList.length - 1"
-              />
+            <van-cell-group title="学术兼职" inset>
+              <van-cell v-for="(item, index) in memberInfo.academicList" :key="index" :title="item.department"
+                :label="item.duty" :border="index !== memberInfo.academicList.length - 1" />
             </van-cell-group>
           </div>
         </div>
@@ -276,7 +254,7 @@ onMounted(() => {
   :deep(.van-cell) {
     padding: 16px;
     background: #f8f9fa;
-    
+
     &__title {
       font-size: 14px;
       color: rgba(0, 0, 0, 0.85);
@@ -296,6 +274,7 @@ onMounted(() => {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
