@@ -5,7 +5,7 @@ import YZHImg from '@/assets/images/余志辉.png'
 import LYImg from '@/assets/images/吕莉.png'
 import ZSWImg from '@/assets/images/庄文雅.png'
 import WWLImg from '@/assets/images/王武龙.png'
-import RLYImg from '@/assets/images/罗兰英.png'
+// import RLYImg from '@/assets/images/罗兰英.png'
 import HHWImg from '@/assets/images/胡浩波.png'
 import CJHImg from '@/assets/images/陈锦辉.png'
 
