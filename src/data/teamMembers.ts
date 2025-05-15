@@ -13,6 +13,8 @@ import SYYImg from '@/assets/images/史伊洋.png'
 import WXYImg from '@/assets/images/汪雪英.png'
 import ZYMImg from '@/assets/images/郑耀梅.png'
 import ZWXImg from '@/assets/images/曾维鑫.png'
+import KJJImg from '@/assets/images/邝俊杰.png'
+import BXXImg from '@/assets/images/毕晓霞.png'
 
 
 export interface TeamMember {
@@ -21,6 +23,7 @@ export interface TeamMember {
     title: string
     position: string
     description?: string
+    honors?: string[]
     academicList?: Array<{
         department: string
         duty: string
@@ -79,6 +82,50 @@ export const teamMembers: TeamMember[] = [
         ]
     },
     {
+        name: '毕晓霞',
+        image: BXXImg,
+        title: '毕晓霞',
+        position: '主任医师',
+        description: '擅长擅长包括肺癌、乳腺癌、食管癌、鼻咽癌、喉癌、结直肠癌、肝癌、宫颈癌、卵巢癌、淋巴瘤、软组织肿瘤等各种恶性肿瘤的放疗、化疗、靶向治疗、免疫治疗等，尤擅长放化疗、介入、消融等各种肿瘤治疗方法的综合治疗和统筹安排，最大化优势解决中晚期肿瘤患者的困境。1994年毕业于皖南医学院临床医学系，毕业后就职于皖南医学院附属弋矶山医院放疗科，2002年人才引进惠州市中心人民医院放疗科，2014年创建惠州市第一人民医院肿瘤科至今。先后在中国医学科学院肿瘤医院、中山大学附属肿瘤医院、山东省肿瘤医院进修学习。参加卫生部举办的“首期中意肿瘤医学领军人才培养项目”，2014年完成中山大学“临床肿瘤学专业研究生课程进修班学习”。擅长常见恶性肿瘤放、化疗、靶向、免疫治疗，以及肿瘤筛查与康复、临终关怀及癌痛诊治创建惠州市总工会设立“肺癌精准筛查女职工工作室”。主持参与广东省级科研3项，获得惠州市科技局科技进步3等奖2项，国家级核心期刊发表专业论著20余篇，SCI文章2篇。',
+        // 个人荣誉
+        honors: ['惠州市第一人民医院肿瘤科学科带头人', '惠州市好医生、岭南名医、南粤好医生、抗疫好医生', '广东省五一劳动奖章获得者', '抗击新冠肺炎疫情全国三八红旗手'],
+        // 学术兼职
+        academicList: [
+            {
+                department: '惠州市医师协会肿瘤科医师分会',
+                duty: '主任委员',
+            },
+            {
+                department: '惠州市抗癌协会',
+                duty: '副主任委员',
+            },
+            {
+                department: '惠州市保健专家',
+                duty: '',
+            },
+            {
+                department: '广东省药学会第一届肿瘤全程管理专业委员会',
+                duty: '副主任委员',
+            },
+            {
+                department: '广东省医学会肿瘤科学分会',
+                duty: '委员',
+            },
+            {
+                department: '广东省临床医学会肿瘤免疫治疗专业委员会',
+                duty: '常务委员',
+            },
+            {
+                department: '广东省健康管理学会乳腺病学专委会',
+                duty: '常务委员',
+            },
+            {
+                department: '广东省医学会临床研究学会',
+                duty: '委员',
+            },
+        ]
+    },
+    {
         name: '吕莉',
         image: LYImg,
         title: '吕莉',
@@ -87,34 +134,64 @@ export const teamMembers: TeamMember[] = [
         // 学术兼职
         academicList: [
             {
-                department: '惠州市抗癌协会传统医学专业委员会',
-                duty: '常务委员',
+                department: '惠州市第一人民医院肿瘤内科一区主任医师',
+                duty: '医学硕士',
+            },
+            {
+                department: '惠州市医师协会肿瘤放射治疗医师分会第一届委员会',
+                duty: '副主任委员',
             },
             {
                 department: '惠州市医学会肿瘤放射治疗学分会',
                 duty: '常务委员',
             },
             {
-                department: '广东省肝脏病学会放射肿瘤专业委员会',
-                duty: '委员',
+                department: '惠州市抗癌协会放疗专业委员会',
+                duty: '常务委员',
             },
             {
-                department: '广东省医学教育协会肿瘤学专业委员会',
-                duty: '委员',
+                department: '惠州市抗癌协会',
+                duty: '理事',
             },
             {
-                department: '广东省预防医学会肿瘤防治专业委员会',
-                duty: '委员',
+                department: '惠州市抗癌协会头颈肿瘤专业委员会',
+                duty: '秘书',
             },
             {
                 department: '广东省抗癌协会神经肿瘤专业委员会',
                 duty: '委员',
             },
             {
-                department: '惠州市抗癌协会头颈肿瘤专业委员会',
-                duty: '秘书',
+                department: '广东省医师协会人工智能临床应用专业委员会',
+                duty: '委员',
+            },
+            {
+                department: '广东省抗癌协会癌症筛查与早诊早治专业委员会',
+                duty: '委员',
             },
         ],
+    },
+    {
+        name: '邝俊杰',
+        image: KJJImg,
+        title: '邝俊杰',
+        position: '医学博士 博士后 主治医师',
+        description: '邝俊杰医师毕业于南方医科大学，长期从事肿瘤放射治疗临床和基础研究工作。特别是头颈、肺癌、食管癌的同步放化疗、免疫治疗，有扎实的科研基础和丰富的临床工作经验。曾与中山大学肿瘤防治中心进修学习，掌握先进放疗技术，获得优秀进修生称号。主持或参与省市级课题多项，SCI论文收录7篇。',
+        // 学术兼职
+        academicList: [
+            {
+                department: '广东省临床医学会肿瘤学专业委员会',
+                duty: '委员',
+            },
+            {
+                department: '广州抗癌协会消化道肿瘤',
+                duty: '青年委员',
+            },
+            {
+                department: '惠州市抗癌协会',
+                duty: '委员',
+            }
+        ]
     },
     // {
     //   name: '罗兰英',

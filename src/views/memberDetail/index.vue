@@ -35,6 +35,12 @@ onMounted(() => {
           <div class="position van-ellipsis">{{ memberInfo.position }}</div>
           <div class="description">{{ memberInfo.description }}</div>
 
+          <div v-if="memberInfo.honors" class="honor-list">
+            <van-cell-group title="个人荣誉" inset>
+              <van-cell v-for="(item, index) in memberInfo.honors" key="index" :title="item" :border="index !== memberInfo.honors.length - 1" />
+            </van-cell-group>
+          </div>
+
           <div v-if="memberInfo.academicList" class="academic-list">
             <van-cell-group title="学术兼职" inset>
               <van-cell v-for="(item, index) in memberInfo.academicList" :key="index" :title="item.department"
@@ -107,6 +113,7 @@ onMounted(() => {
   text-indent: 2em;
 }
 
+.honor-list,
 .academic-list {
   width: 100%;
   margin-top: 20px;
