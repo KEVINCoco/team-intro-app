@@ -15,6 +15,7 @@ import ZYMImg from '@/assets/images/郑耀梅.png'
 import ZWXImg from '@/assets/images/曾维鑫.png'
 import KJJImg from '@/assets/images/邝俊杰.png'
 import BXXImg from '@/assets/images/毕晓霞.png'
+import ZKBImg from '@/assets/images/朱凯彬.png'
 
 
 export interface TeamMember {
@@ -213,6 +214,13 @@ export const teamMembers: TeamMember[] = [
         title: '庄文雅',
         position: '医师',
         description: '硕士研究生，毕业于南方医科大学肿瘤学专业，在导师指导下完成肺癌相关课题研究，在佛山市第一人民医院肿瘤中心完成放射肿瘤学住院医师规范化培训，熟悉常见恶性肿瘤的诊疗规范，掌握常见恶性肿瘤的放射治疗、化疗等综合治疗，掌握常见恶性肿瘤的靶区勾画原则。'
+    },
+    {
+        name: '朱凯彬',
+        image: ZKBImg,
+        title: '朱凯彬',
+        position: '医学硕士 医师',
+        description: '放射肿瘤学硕士，医师，毕业于南昌大学，擅长于妇科肿瘤、软组织恶性肿瘤、头颈部肿瘤等常见肿瘤的诊治。'
     },
     {
         name: '胡浩波',
