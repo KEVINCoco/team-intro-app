@@ -16,6 +16,7 @@ import ZWXImg from '@/assets/images/曾维鑫.png'
 import KJJImg from '@/assets/images/邝俊杰.png'
 import BXXImg from '@/assets/images/毕晓霞.png'
 import ZKBImg from '@/assets/images/朱凯彬.png'
+import ZLImg from '@/assets/images/郑露.png'
 
 
 export interface TeamMember {
@@ -37,7 +38,7 @@ export const teamMembers: TeamMember[] = [
         image: WWLImg,
         title: '王武龙',
         position: '医学博士 主任医师',
-        description: '科主任：王武龙，中共党员，肿瘤学博士，主任医师，硕士研究生导师。王武龙医师毕业于天津医科大学，师从我国著名放射肿瘤专家、原天津医科大学肿瘤医院院长王平教授。王武龙主任长期从事肿瘤放射治疗临床工作，熟悉并掌握实体瘤的临床治疗，特别是肺癌、食管癌、结直肠癌的同步放化疗，具备扎实的理论基础和丰富的临床工作经验。并曾于中国医学科学院肿瘤医院和中山大学附属肿瘤医院放疗中心进修学习，掌握先进的肿瘤放射治疗技术，可为肿瘤患者提供精准治疗。王武龙主任致力于抗肿瘤血管生成的基础科学研究工作，主持各级各类科研项目8项，参与各级各类科研项目6项；发表论文20余篇，SCI收录7篇；参与编写医学著作7部。',
+        description: '王武龙，中共党员，肿瘤学博士，主任医师，广东医科大学肿瘤学硕士研究生导师。王武龙主任毕业于天津医科大学，师从我国著名放射肿瘤专家、原天津医科大学肿瘤医院院长王平教授。王武龙主任从事肿瘤放射治疗临床工作20年，曾于中国医学科学院肿瘤医院和中山大学附属肿瘤医院放疗中心进修学习，具备扎实的理论基础和丰富的临床工作经验，熟悉并掌握全身恶性肿瘤和良性病的放射治疗，特别是肺癌、乳腺癌、妇科肿瘤、头颈部肿瘤、食管癌、直肠癌的精准放疗。王武龙主任担任中华医学杂志社《中华肿瘤杂志》审稿专家，致力于抗肿瘤血管生成和肿瘤微环境的基础科学研究工作，主持和参与科研项目10余项；发表论文20余篇，SCI收录7篇；参与编写医学著作7部。',
         // 学术兼职
         academicList: [
             {
@@ -53,32 +54,40 @@ export const teamMembers: TeamMember[] = [
                 duty: '委员',
             },
             {
-                department: '广东省惠州市抗癌协会肿瘤放疗专委会',
+                department: '惠州市医师协会肿瘤放疗医师分会',
+                duty: '主任委员',
+            },
+            {
+                department: '广东省健康科普促进会头颈肿瘤防治分会',
                 duty: '副主任委员',
             },
             {
-                department: '内蒙古抗癌协会肺癌专业委员会',
-                duty: '副主任委员',
-            },
-            {
-                department: '包头市医学会肿瘤医学专科分会',
-                duty: '副主任委员',
-            },
-            {
-                department: '内蒙古抗癌协会神经肿瘤青委会',
-                duty: '副主任委员',
-            },
-            {
-                department: '内蒙古医学会放射肿瘤学分会',
+                department: '广东省抗癌协会肿瘤靶向治疗专委会',
                 duty: '常务委员',
             },
             {
-                department: '内蒙古抗癌协会肿瘤放疗专委会',
-                duty: '常务委员',
+                department: '广东省医学会放射肿瘤学分会',
+                duty: '委员',
             },
             {
-                department: '内蒙古医师协会放射治疗医师分会',
-                duty: '常务委员',
+                department: '广东省抗癌协会放疗专委会',
+                duty: '委员',
+            },
+            {
+                department: '广东省医学装备学会放疗装备技术分会',
+                duty: '委员',
+            },
+            {
+                department: '广东省临床医学学会咽喉肿瘤专委会',
+                duty: '委员',
+            },
+            {
+                department: '惠州市抗癌协会',
+                duty: '副会长',
+            },
+            {
+                department: '惠州市抗癌协会放疗专委会',
+                duty: '副主任委员',
             },
         ]
     },
@@ -221,6 +230,32 @@ export const teamMembers: TeamMember[] = [
         title: '朱凯彬',
         position: '医学硕士 医师',
         description: '放射肿瘤学硕士，医师，毕业于南昌大学，擅长于妇科肿瘤、软组织恶性肿瘤、头颈部肿瘤等常见肿瘤的诊治。'
+    },
+    {
+        name: '郑露',
+        image: ZLImg,
+        title: '郑露',
+        position: '医学硕士 主治医师',
+        description: '毕业于广州医科大学 肿瘤放射治疗专业，熟悉胸部肿瘤、腹部肿瘤、头颈部肿瘤的诊治，尤其是肺癌放化疗、免疫靶向治疗。',
+        // 学术兼职
+        academicList: [
+            {
+                department: '惠州市抗癌协会',
+                duty: '委员',
+            },
+            {
+                department: '惠州市抗癌协会头颈部肿瘤学会',
+                duty: '委员',
+            },
+            {
+                department: '惠州市抗癌协会肺癌专业委员会',
+                duty: '委员',
+            },
+            {
+                department: '惠州市肿瘤临床研究协会肿瘤放疗专业委员会',
+                duty: '委员',
+            },
+        ]
     },
     {
         name: '胡浩波',
