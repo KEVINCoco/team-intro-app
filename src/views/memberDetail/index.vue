@@ -32,6 +32,7 @@ onMounted(() => {
         </van-image>
         <div class="info van-slide-up-enter-active">
           <div class="title van-ellipsis">{{ memberInfo.title }}</div>
+          <div class="post-title van-ellipsis">{{ memberInfo.postTitle }}</div>
           <div class="position van-ellipsis">{{ memberInfo.position }}</div>
           <div class="description">{{ memberInfo.description }}</div>
 
@@ -92,8 +93,30 @@ onMounted(() => {
 }
 
 .title {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.85);
+  font-size: 24px;
+  font-weight: 600;
+  color: #323233;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #1989fa, #39bbff);
+    border-radius: 2px;
+  }
+}
+
+.post-title {
+  font-size: 20px;
+  color: #646566;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 

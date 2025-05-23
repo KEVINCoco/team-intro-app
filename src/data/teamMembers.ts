@@ -23,6 +23,8 @@ export interface TeamMember {
     name: string
     image: string
     title: string
+    // 头衔
+    postTitle?: string
     position: string
     description?: string
     honors?: string[]
@@ -37,6 +39,7 @@ export const teamMembers: TeamMember[] = [
         name: '王武龙',
         image: WWLImg,
         title: '王武龙',
+        postTitle: '肿瘤放疗中心主任',
         position: '医学博士 主任医师',
         description: '王武龙，中共党员，肿瘤学博士，主任医师，广东医科大学肿瘤学硕士研究生导师。王武龙主任毕业于天津医科大学，师从我国著名放射肿瘤专家、原天津医科大学肿瘤医院院长王平教授。王武龙主任从事肿瘤放射治疗临床工作20年，曾于中国医学科学院肿瘤医院和中山大学附属肿瘤医院放疗中心进修学习，具备扎实的理论基础和丰富的临床工作经验，熟悉并掌握全身恶性肿瘤和良性病的放射治疗，特别是肺癌、乳腺癌、妇科肿瘤、头颈部肿瘤、食管癌、直肠癌的精准放疗。王武龙主任担任中华医学杂志社《中华肿瘤杂志》审稿专家，致力于抗肿瘤血管生成和肿瘤微环境的基础科学研究工作，主持和参与科研项目10余项；发表论文20余篇，SCI收录7篇；参与编写医学著作7部。',
         // 学术兼职
