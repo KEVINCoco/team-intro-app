@@ -3,7 +3,7 @@ import { teamMembers } from '@/data/teamMembers'
 </script>
 
 <template>
-    <van-nav-bar title="首页" :border="false" :safe-area-inset-top="true" />
+    <van-nav-bar title="团队介绍" :border="false" :safe-area-inset-top="true" />
     <div class="team-intro">
         <van-row :gutter="[16, 16]">
             <van-col v-for="member in teamMembers" :key="member.name" span="12">
