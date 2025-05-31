@@ -36,6 +36,7 @@ import specialImg from "@/assets/images/special.jpg"
 <style scoped>
 .department-view {
     padding-bottom: 20px;
+    background: #f7f8fa;
 }
 
 .content {
