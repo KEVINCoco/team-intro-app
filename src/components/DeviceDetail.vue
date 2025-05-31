@@ -11,6 +11,9 @@ const props = defineProps<Props>()
 
 const paramActiveNames = ref(['param-0']) // 默认展开第一个参数
 const featureActiveNames = ref(['feature-0']) // 默认展开第一个特点
+
+// 使用 props
+console.log(props)
 </script>
 
 <template>
