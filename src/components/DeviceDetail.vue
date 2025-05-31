@@ -6,6 +6,7 @@ interface Props {
   device: Device
 }
 
+// @ts-ignore
 const props = defineProps<Props>()
 
 const paramActiveNames = ref(['param-0']) // 默认展开第一个参数
