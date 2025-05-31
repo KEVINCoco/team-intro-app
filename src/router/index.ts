@@ -17,6 +17,17 @@ const routes: Array<RouteRecordRaw> = [
     path: '/device',
     name: 'devicePro',
     component: () => import('@/views/devicePro/index.vue')
+  },
+  {
+    path: '/device/:id',
+    name: 'deviceDetail',
+    component: () => import('@/views/devicePro/detail.vue'),
+    props: true
+  },
+  {
+    path: '/department',
+    name: 'department',
+    component: () => import('@/views/department/index.vue')
   }
 ]
 

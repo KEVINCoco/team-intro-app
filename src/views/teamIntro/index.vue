@@ -39,6 +39,7 @@ import { teamMembers } from '@/data/teamMembers'
     transition: all 0.3s ease;
     cursor: pointer;
     padding: 16px;
+    text-align: center;
 }
 
 .member-card:hover {
