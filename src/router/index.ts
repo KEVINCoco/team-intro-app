@@ -28,6 +28,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/department',
     name: 'department',
     component: () => import('@/views/department/index.vue')
+  },
+  {
+    path: '/department/situation',
+    name: 'departmentSituation',
+    component: () => import('@/views/department/situation.vue')
+  },
+  {
+    path: '/department/special',
+    name: 'departmentSpecial',
+    component: () => import('@/views/department/special.vue')
   }
 ]
 
